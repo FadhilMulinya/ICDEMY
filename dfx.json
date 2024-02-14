@@ -1,0 +1,29 @@
+{
+  "canisters": {
+    "icdemy_documentation_backend": {
+      "main": "src/icdemy_documentation_backend/main.mo",
+      "type": "motoko"
+    },
+    "icdemy_documentation_frontend": {
+      "dependencies": [
+        "icdemy_documentation_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/icdemy_documentation_frontend/src/index.html"
+      },
+      "source": [
+        "src/icdemy_documentation_frontend/assets",
+        "dist/icdemy_documentation_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
