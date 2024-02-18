@@ -1,25 +1,34 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import Nanodegree from './components/Nanodegree';
+import Courses from './components/Courses';
+import Contact from './components/Contact';
+import Blog from './components/Blogs';
+import Header from './components/Header';
+import MainBanner from './components/MainBanner';
+import LearnMoreButton from './components/LearnMoreButton';
+import Visuals from './components/Visuals';
 
-function App() {
+
+const App = () => {
+  const [signedIn, setSignedIn] = useState(false);
+
+  const handleSignInClick = () => {
+    setSignedIn((prevSignedIn) => !prevSignedIn);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Header signedIn={signedIn} onSignInClick={handleSignInClick} />
+      <MainBanner />
+      <LearnMoreButton />
+      <Visuals />
+      <Nanodegree />
+      <Courses/>
+      <Blog />
+      <Contact />
     </div>
   );
-}
+};
 
 export default App;
