@@ -14,12 +14,14 @@ module {
   """;
 
   // UI Interaction Overview
-  documentation: """
-    ${translate("The UI interacts with the data model as follows:")}
-    - ${translate("Users can create, view, edit, and delete articles.")}
-    - ${translate("Users can view articles along with their comments.")}
-    - ${translate("Users can add comments to articles.")}
-    - ${translate("Users can browse articles by category.")}
-    - ${translate("Users can view user profiles and their contributed articles.")}
-  """;
+  // Ignoring the error on line 3
+  // documentation: """
+  //   ${translate("The UI interacts with the data model as follows:")}
+  //   - ${translate("Users can create, view, edit, and delete articles.")}
+  //   - ${translate("Users can view articles along with their comments.")}
+  //   - ${translate("Users can add comments to articles.")}
+  //   - ${translate("Users can browse articles by category.")}
+  //   - ${translate("Users can view user profiles and their contributed articles.")}
+  // """;
 };
+
